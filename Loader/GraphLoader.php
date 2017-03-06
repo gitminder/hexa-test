@@ -22,7 +22,6 @@ class GraphLoader
 
     /**
      * Minimal assumed length of the input file name
-     * (protocol + slashes + colon + ... etc.)
      */
     const MIN_FILE_NAME_LENGHT = 5;
 
