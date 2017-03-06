@@ -1,5 +1,6 @@
 <?php
 namespace Loader;
+
 use Loader\Exception\FileReceiveException;
 use Loader\Exception\FileWriteException;
 
@@ -51,7 +52,7 @@ class GraphLoader
         if ($destinationFolder == "" || !file_exists($destinationFolder))
             throw new \InvalidArgumentException("Destination folder not exists");
 
-        $destination = $destinationFolder.DIRECTORY_SEPARATOR.$sourceInfo['basename'];
+        $destination = $destinationFolder."/".$sourceInfo['basename'];
 
         if (file_exists($destination))
             throw new FileWriteException("File already exists");
